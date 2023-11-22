@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 class ScaffoldWidget extends StatelessWidget {
   final int _count = 0;
+
+  const ScaffoldWidget({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

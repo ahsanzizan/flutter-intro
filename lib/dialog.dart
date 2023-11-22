@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DialogWidget extends StatelessWidget {
+  const DialogWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,10 +19,11 @@ class DialogWidget extends StatelessWidget {
 }
 
 showAlertDialog(BuildContext context) {
-// set up the button
   Widget okButton = FloatingActionButton(
     child: const Text("OK"),
-    onPressed: () {},
+    onPressed: () {
+      Navigator.pop(context);
+    },
   );
   AlertDialog alert = AlertDialog(
     title: const Text("My title"),
